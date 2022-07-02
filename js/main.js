@@ -1,6 +1,8 @@
 // Navbar
+let contentWidth = $("#nav-content").outerWidth(true);
+$("nav").css('left' , `-=${contentWidth}`);
 $("#open").click(function(){
-    let contentWidth = $("#nav-content").outerWidth(true);
+    
     if($("nav").css("left") < `0px`)
     {
         $("nav").animate({"left" : `+=${contentWidth}`},500);
