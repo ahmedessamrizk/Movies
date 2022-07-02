@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>JS Exam</title>
+  </head>
+  <body>
+    <!-- Side-Navbar -->
+    <nav class="text-white d-flex">
+      <div class="content d-flex flex-column" id="nav-content">
+        <div class="nav-links">
+          <ul class="py-3 ps-3 pe-4 fw-light">
+            <li class="nav-link">
+              <a href="#now_playing" class="text-white">Now playing</a>
+            </li>
+            <li class="nav-link">
+              <a href="#popular" class="text-white">Popular</a>
+            </li>
+            <li class="nav-link">
+              <a href="#top_rated" class="text-white">Top Rated</a>
+            </li>
+            <li class="nav-link">
+              <a href="#trending" class="text-white">Trending</a>
+            </li>
+            <li class="nav-link">
+              <a href="#upcoming" class="text-white">Upcoming</a>
+            </li>
+            <li class="nav-link">
+              <a href="#contact" class="text-white" id="demo">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-footer mt-auto mb-4 ms-3 me-0">
+          <div class="icons ms-3 mb-3 text-white">
+            <i class="fa-brands fa-facebook-f d-inline-block"></i>
+            <i class="fa-brands fa-twitter d-inline-block px-3"></i>
+            <i class="fa-solid fa-globe d-inline-block"></i>
+          </div>
+          <div class="nav-footer-p pe-2">
+            <p>
+              Copyright Â© 2019 All Rights <br />
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="openMenu d-flex bg-white align-items-center flex-column px-3 text-dark"
+      >
+        <div class="logo mb-auto mt-3">
+          <img src="img/logo.png" alt="" width="30" height="48" />
+        </div>
+        <div class="openBtn my-auto">
+          <span class="" id="open"><i class="fa fa-align-justify fa-xs fw-bold"></i></span>
+        </div>
+        <div class="icons mt-auto mb-2">
+          <i class="fa-solid fa-globe d-block fa-2xs py-2"></i>
+          <i class="fa-solid fa-share-nodes fa-2xs"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Side-Navbar -->
+
+    <div class="container w-75 pt-4">
+      
+        <!-- Search Menus -->
+        <section class="search mt-5 mb-3">
+          <form action="">
+            <div class="container">
+            <div class="row">
+              <div class="form-group col-md-6 mb-3">
+                <input
+                  type="text"
+                  class="form-control text-white text-white"
+                  placeholder="get movies by word"
+                  id="searchByMovie"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control text-white"
+                  placeholder="search..."
+                  id="search"
+                />
+              </div>
+            </div>
+          </div>
+          </form>
+        </section>
+        <!-- End of Search Menus -->
+
+      <!-- Films -->
+        <section class="films mt-5">
+          <div class="container mt-4 px-0">
+            <div class="row gy-4 px-0 mx-0" id="moviesContainer">
+              
+            </div>
+          </div>
+        </section>
+      <!-- End of films -->
+      
+      <!-- Contact -->
+      <section class="contact pb-5">
+        <h3 class="text-white fw-light my-5 fs-2">ContactUs...</h3>
+        <form action="" class="mt-3">
+          <div class="container">
+          <div class="row">
+            <div class="form-group col-md-6 mb-3">
+              <input
+                type="text"
+                class="form-control text-white"
+                placeholder="Enter Your Name"
+                id="yourName"
+              />
+              <div class="alert alert-danger" id="namealert" role="alert">
+                Your Name is not valid
+              </div>
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <input
+                type="email"
+                class="form-control text-white"
+                placeholder="Enter Email"
+                id="yourEmail"
+              />
+              <div class="alert alert-danger" id="namealert" role="alert">
+                Your Email is not valid
+              </div>
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <input
+                type="text"
+                class="form-control text-white"
+                placeholder="Enter Phone"
+                id="yourPhone"
+              />
+              <div class="alert alert-danger" id="namealert" role="alert">
+                Your Phone is not valid
+              </div>
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <input
+                type="text"
+                class="form-control text-white"
+                placeholder="Enter Age"
+                id="YourAge"
+              />
+              <div class="alert alert-danger" id="namealert" role="alert">
+                Your Age is not valid
+              </div>
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <input
+                type="password"
+                class="form-control text-white"
+                placeholder="Enter Password"
+                id="YourPass"
+              />
+              <div class="alert alert-danger" id="namealert" role="alert">
+                Enter valid password *Minimum eight characters, at least one letter and one number:*
+              </div>
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <input
+                type="password"
+                class="form-control text-white"
+                placeholder="Enter RePassword"
+                id="yourRePass"
+              />
+              <div class="alert alert-danger" id="namealert" role="alert">
+                Enter valid Repassword
+              </div>
+            </div>
+            <div class="col-md-2">
+            <button type="submit" id="submitBtn" class="btn btn-outline-danger fw-light">Submit</button>
+          </div>
+          </div>
+        </div>
+        </form>
+      </section>
+      <!-- End of Contact -->
+
+      <!-- Spinner Loading -->
+      <div id="loading" class=" align-items-center justify-content-center">
+        <div class="spinner">
+          <div class="cube1"></div>
+          <div class="cube2"></div>
+        </div>
+      </div>
+      <!-- End of Spinner Loading -->
+      
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
