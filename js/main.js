@@ -149,31 +149,19 @@ function displayMovies(movies){
 }
 
 //ReGex
-$(".contact input").click(function(e){
-    let inputField = e.currentTarget;
-    console.log(inputField.value);
-    if(inputField.value == "")
-    {
-        $(inputField).next().css('display' , 'block');
-    } 
-});
 $(".contact input").keyup(function(e){
     let inputField = e.currentTarget;
     let inputFieldValue = inputField.value;
     if(($(inputField).attr('id')) == "yourName")
     {
-        console.log(inputFieldValue);
-        inputFieldValue.trim();
-        console.log(inputFieldValue.length);
-        if(!inputFieldValue.replace(/\s/g, '').length)
+        if(validationName(inputFieldValue) == true)
         {
-            $(inputField).next().css('display' , 'block');
+            $(inputField).next().css('display' , 'none');
         }
         else
         {
-            console.log("hello");
-            $(inputField).next().css('display' , 'none');
-        } 
+            $(inputField).next().css('display' , 'block');
+        }
     }
     else if(($(inputField).attr('id')) == "yourEmail")
     {
@@ -234,6 +222,14 @@ $(".contact input").keyup(function(e){
 });
 
 //Validation codes
+function validationName(name)
+{
+    let regex = /^[a-zA-Z ]*$/;
+    if(regex.test(name))
+        return true;
+    else
+        return false;
+}
 function validationEmail(email)
 {
     var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
